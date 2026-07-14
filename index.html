@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>噗浪周邊客製工作室</title>
+<meta name="description" content="噗浪周邊客製工作室資訊整理與體驗回報，方便委託前查詢工作室營運狀況、工廠與過往評價。">
+<link rel="icon" type="image/svg+xml" href="assets/img/icon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="charm-dot"><img src="assets/img/icon.svg" alt="噗浪周邊客製工作室 icon"></span>
+      <span>噗浪周邊客製工作室<small>CUSTOM STUDIO in PLURK</small></span>
+    </a>
+    <nav class="header-nav">
+      <a class="nav-back" href="https://www.plurk.com/p/3iwsb1k1ce" target="_blank" rel="noopener">偷偷說本舖</a>
+      <a class="nav-back" href="https://forms.gle/vKrqEjvEFRfstep89" target="_blank" rel="noopener">體驗回報</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p>整理工作室資訊與體驗評價</br>
+      報錯或建議可於上方連結通知</br>
+      誠徵維護小精靈</p>
+
+    <details class="changelog-details">
+      <summary class="changelog-summary">
+        <span class="changelog-dot"></span>
+        <span>更新日誌</span>
+        <span class="changelog-arrow">👇</span>
+      </summary>
+      <div class="changelog-content" id="changelogContent">
+        <div class="spinner" style="width:20px; height:20px; margin:10px auto;"></div>
+        <p style="text-align:center; font-size:0.85rem; color:var(--ink-soft);">日誌載入中...</p>
+      </div>
+    </details>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="搜尋工作室名稱或噗浪帳號…">
+    </div>
+  </section>
+
+  <section class="filters">
+    <div class="filter-group">
+      <label>營運狀況</label>
+      <select id="filterStatus"><option value="">全部狀態</option></select>
+    </div>
+    <div class="filter-group">
+      <label>工廠</label>
+      <select id="filterFactory"><option value="">全部工廠</option></select>
+    </div>
+    <div class="filter-group">
+      <label>客製項目</label>
+      <select id="filterItem"><option value="">全部項目</option></select>
+    </div>
+    <div class="filter-group">
+      <label>排序方式</label>
+      <select id="filterSort">
+        <option value="count_desc">評價多→寡</option>
+        <option value="avg_desc">評價高→低</option>
+      </select>
+    </div>
+  </section>
+
+  <p class="result-count" id="resultCount"></p>
+
+  <section class="studio-grid" id="studioGrid" aria-live="polite"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    以 Claude.ai 製作<br>
+    資料整理自社群共同回報，僅供參考<br>
+    <a href="https://pixabay.com/vectors/heart-love-kawaii-face-expression-5106075/" target="_blank" rel="noopener">背景素材</a> ・ 
+    <a href="https://docs.google.com/spreadsheets/d/1fpoLejfAJz6bQwAPA4xwTzQzW21Y-5ABPT1f-vaGwsQ/edit?usp=sharing" target="_blank" rel="noopener">Google 試算表</a>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/gsheet.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
