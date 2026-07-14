@@ -269,7 +269,6 @@ button, input, select{ font-family: inherit; }
 
 .score-summary{
   display:inline-flex; align-items:baseline; gap:8px;
-  background: var(--accent-soft);
   border-radius: var(--radius-md);
   padding: 12px 20px;
   margin-bottom: 20px;
