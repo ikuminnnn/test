@@ -252,7 +252,7 @@ button, input, select{ font-family: inherit; }
 .info-card .value{ font-weight:500; word-break: break-word; }
 
 .section-title{
-  font-family: var(--font-display); font-size:1.2rem; margin: 32px 0 16px;
+  font-family: var(--font-display); font-size:1.2rem; margin: 0;
   display:flex; align-items:center; gap:10px; font-weight: 700;
 }
 .section-title .count{
@@ -260,7 +260,21 @@ button, input, select{ font-family: inherit; }
   color: var(--highlight); padding:3px 10px; border-radius:999px; font-weight:700;
 }
 
-.score-summary{ display:flex; align-items:baseline; gap:8px; margin-bottom: 18px; }
+/* 「體驗回報」標題與排序控制放在同一行，兩端對齊 */
+.review-header{
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap: wrap; gap: 10px 16px;
+  margin: 32px 0 16px;
+}
+
+.score-summary{
+  display:inline-flex; align-items:baseline; gap:8px;
+  background: var(--accent-soft);
+  border-radius: var(--radius-md);
+  padding: 12px 20px;
+  margin-bottom: 20px;
+}
+.score-summary:empty{ display:none; margin-bottom:0; }
 .score-summary .num{ font-family: var(--font-display); font-size:2.2rem; color: var(--accent); font-weight: 700; }
 .score-summary .of{ color: var(--ink-soft); font-family: var(--font-mono); font-size: .85rem; }
 
@@ -302,7 +316,7 @@ button, input, select{ font-family: inherit; }
 
 /* 體驗回報排序控制 */
 .review-controls{
-  display:flex; align-items:center; gap:10px; margin-bottom: 14px;
+  display:flex; align-items:center; gap:10px;
 }
 .review-controls label{
   font-family: var(--font-mono); font-size:.7rem; font-weight:700; color: var(--ink-soft);
